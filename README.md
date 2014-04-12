@@ -13,4 +13,4 @@ Once everything is installed, these `.bashrc` commands set up my environment:
     export IRONPYTHONPATH=$IRONLANGUAGESDIR/External.LCA_RESTRICTED/Languages/IronPython/27/Lib/:$IRONPYTHONPATH
     alias ironpy='mono $IRONLANGUAGESDIR/bin/Release/ipy.exe'
 
-I have played around with the IronPython example code that comes with the Infer.NET distribution. I think the original code has just been tested under Mono on Windows. It didn't work so well on Ubuntu, some of the distribution classes (amongst others) would not `import` properly. The code in the IronPython directory is fixes these problems with the examples.
+I have played around with the IronPython example code that comes with the Infer.NET distribution. I think the original code has just been tested under Mono on Windows. It didn't work so well on Ubuntu, some of the distribution classes (amongst others) would not `import` properly. The code in the IronPython directory fixes these problems with the examples.
