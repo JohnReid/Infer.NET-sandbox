@@ -1,8 +1,6 @@
 Infer.NET-sandbox
 =================
 
-Code for playing with Infer.NET
-
 Sandbox for playing around with Infer.NET models. I'm using Mono to run Infer.NET
 in IronPython on Ubuntu 13.10.
 
