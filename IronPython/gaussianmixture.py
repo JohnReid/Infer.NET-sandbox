@@ -61,7 +61,12 @@ means[k] = Variable.VectorGaussianFromMeanAndPrecision(mm0, mp0).ForEach(k)
 
 # Mixture component precisions
 precs = Variable.Array[PositiveDefiniteMatrix](k).Named("precs")
-precs[k] = Variable.WishartFromShapeAndScale(100.0, PositiveDefiniteMatrix.IdentityScaledBy(2,0.01)).ForEach(k)
+# Original prior
+#precs[k] = Variable.WishartFromShapeAndScale(
+#    100.0, PositiveDefiniteMatrix.IdentityScaledBy(2,0.01)).ForEach(k)
+# Alternative prior suggested by Tom Minka in Infer.NET forum
+precs[k] = Variable.WishartFromShapeAndScale(
+    1.0, PositiveDefiniteMatrix.IdentityScaledBy(2,1)).ForEach(k)
 
 # Mixture weights
 weights = Variable.Dirichlet(k, System.Array[float]((1, 1))).Named("weights")
